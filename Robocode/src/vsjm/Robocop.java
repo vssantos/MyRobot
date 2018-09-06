@@ -1,4 +1,4 @@
-package supersample;
+package vsjm;
 
 import java.awt.Color;
 import robocode.AdvancedRobot;
@@ -29,7 +29,7 @@ import robocode.util.Utils;
  * to any robot that hits it. It uses Head-on targeting which is popular
  * among lightweight melee bots.
  */
-public class SuperBoxBot extends AdvancedRobot{
+public class Robocop extends AdvancedRobot{
 
     private boolean moved = false; // if we need to move or turn
     private boolean inCorner = false; // if we are in a corner
