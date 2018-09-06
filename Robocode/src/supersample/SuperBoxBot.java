@@ -40,6 +40,7 @@ public class SuperBoxBot extends AdvancedRobot{
 
     @Override
     public void run(){
+        
         setColors(Color.PINK, Color.BLACK, Color.CYAN); // set the colors
         setAdjustGunForRobotTurn(true); // when the robot turns, adjust gun in opposite dir
         setAdjustRadarForGunTurn(true); // when the gun turns, adjust radar in opposite dir
