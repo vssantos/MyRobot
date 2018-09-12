@@ -37,7 +37,7 @@ public class SuperBoxBot extends AdvancedRobot{
     private byte spins = 0; // spin counter
     private byte dir = 1; // direction to move
     private short prevE; // previous energy of robot we're targeting
-
+    boolean movingForward;
     @Override
     public void run(){
 

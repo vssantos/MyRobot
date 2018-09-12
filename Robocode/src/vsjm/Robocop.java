@@ -108,22 +108,28 @@ public class Robocop extends AdvancedRobot{
                 }
             }
         }
+
+        
+
         if(e.getName().equals(targ)){ // if the robot scanned is our target
             spins = 0; // reset radar spin counter
 
-            // if the enemy fires, with a 15% chance,
-            if((prevE < (prevE = (short)e.getEnergy())) && Math.random() > .85){
+            // if the enemy fires, with a 50% chance,
+            if((prevE < (prevE = (short)e.getEnergy())) && Math.random() > .50){
                 dir *= -1; // change direction
             }
 
             setTurnGunRightRadians(Utils.normalRelativeAngle((getHeadingRadians() + e
                     .getBearingRadians()) - getGunHeadingRadians())); // move gun toward them
 
-            if(e.getDistance() < 200){ // the the enemy is further than 200px
-                setFire(3); // fire full power
+            if(e.getDistance() > 450){
+                setFire(1);
             }
-            else{
-                setFire(2.4); // else fire 2.4
+            else if((e.getDistance() < 450) && (e.getDistance() > 250)) {
+                setFire(2);
+            }
+            else {
+                setFire(3);
             }
 
             double radarTurn = getHeadingRadians() + e.getBearingRadians()
